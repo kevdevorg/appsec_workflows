@@ -30,7 +30,7 @@ jobs:
           ls -la
           
       - name: Test
-        working-directory: srcclr
+        working-directory: srcclr/srcclr-3.8.34/bin
         run: |
           ls -la
           ./srcclr scan --url https://github.com/WebGoat/WebGoat.git
