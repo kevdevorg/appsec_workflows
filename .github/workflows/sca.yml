@@ -19,7 +19,7 @@ jobs:
       - name: Create Agent.yml
         working-directory: .srcclr
         run: |
-          echo -e "agentAuthorization: ${{ secrets.scatoken }}\nscmType: GIT > agent.yml"
+          echo -e "agentAuthorization: ${{ secrets.scatoken }}\nscmType: GIT" > agent.yml
           ls -la          
           
       - name: Setup Srcclr
