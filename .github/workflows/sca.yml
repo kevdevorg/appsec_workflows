@@ -33,6 +33,7 @@ jobs:
         working-directory: srcclr/srcclr-3.8.34/bin
         run: |
           ls -la
+          echo $SRCCLR_API_TOKEN
           ./srcclr scan --url https://github.com/WebGoat/WebGoat.git
         env:
           SRCCLR_API_TOKEN: ${{ secrets.scatoken }}
