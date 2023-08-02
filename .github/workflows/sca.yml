@@ -21,10 +21,20 @@ jobs:
         run: |
           echo -e ""
           ls -la          
-       - name: Setup Srcclr
+          
+      - name: Setup Srcclr
         working-directory: srcclr
         run: |
-          echo -e ""
+          curl -O 
+          tar -zxvf srcclr-3.8.34-linux.tgz
           ls -la
           
+      - name: Test
+        working-directory: srcclr
+        run: |
+          ls -la
+          ./srcclr scan --url https://github.com/WebGoat/WebGoat.git
+          
+          
+      
       
