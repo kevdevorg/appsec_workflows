@@ -19,7 +19,7 @@ jobs:
       - name: Create Agent.yml
         working-directory: .srcclr
         run: |
-          echo -e "agentAuthorization: ${{ secrets.scatoken }}\nscmType: GIT" > agent.yml
+          echo -e "agentAuthorization: ${{ secrets.SCATOKEN }}\nscmType: GIT" > agent.yml
           ls -la          
           
       - name: Setup Srcclr
@@ -36,7 +36,7 @@ jobs:
           echo $SRCCLR_API_TOKEN
           ./srcclr scan --url https://github.com/WebGoat/WebGoat.git
         env:
-          SRCCLR_API_TOKEN: ${{ secrets.scatoken }}
+          SRCCLR_API_TOKEN: ${{ secrets.SCATOKEN }}
           
           
       
