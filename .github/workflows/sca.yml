@@ -1,0 +1,30 @@
+name: Veracode SCA
+
+on:
+  workflow_call:
+  
+jobs:
+  veracode_sca:
+    runs-on: ["linux"]
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup
+        run: |
+          mkdir .srcclr
+          mkdir srcclr
+          pwd
+      
+      - name: Create Agent.yml
+        working-directory: .srcclr
+        run: |
+          echo -e ""
+          ls -la          
+       - name: Setup Srcclr
+        working-directory: srcclr
+        run: |
+          echo -e ""
+          ls -la
+          
+      
