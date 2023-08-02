@@ -19,13 +19,13 @@ jobs:
       - name: Create Agent.yml
         working-directory: .srcclr
         run: |
-          echo -e ""
+          echo -e "agentAuthorization: ${{ secrets.scatoken }}\nscmType: GIT > agent.yml"
           ls -la          
           
       - name: Setup Srcclr
         working-directory: srcclr
         run: |
-          curl -O 
+          curl -O https://download.sourceclear.com/srcclr-3.8.34-linux.tgz
           tar -zxvf srcclr-3.8.34-linux.tgz
           ls -la
           
