@@ -7,6 +7,9 @@ jobs:
   veracode_sca:
     runs-on: ubuntu-latest
     
+    env:
+      SRCCLR_API_TOKEN: ${{ secrets.scatoken }}
+    
     steps:
       - uses: actions/checkout@v3
       
